@@ -1,0 +1,60 @@
+.main-bid{
+  border: 3px solid whitesmoke;
+}
+
+.title{
+  padding: 0;
+  margin: 0 ;
+  display: inline-block;
+}
+
+.title:hover{
+  background-color:  rgb(235 235 235);
+}
+
+.subject{
+  color: #007fed;
+  font-weight: 700;
+  font-size: 25px;
+}
+.technology{
+  color: #007fed; 
+}
+
+
+
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:25px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: red;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: red;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: red;
+}
